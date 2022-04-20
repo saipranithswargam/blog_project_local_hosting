@@ -1,0 +1,16 @@
+<%- include('partials/header') -%> 
+
+<h1>Home</h1>
+<p> <%= home %></p>
+
+<% list.forEach(function(element){ %>
+    <h1><%= element.title %></h1>
+    <p> <%= element.text.substring(0,100)+" ..." %>
+    <a  href="/posts/<%=element.title %>" > Read more</a>
+    
+    </p>
+<% }) %>
+
+<%- include('partials/footer') -%>
+<!--in ejs we can comment but need to have comment tag foe each and every line -->
+<!--if we have header and footer in another folder then we need to spaceify the path assuming that we are in partials directory -->
